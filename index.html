@@ -25,10 +25,42 @@
             </div>	
         </div>	
         <div class="buttons">	
-            <button>Load User Data</button>	
-            <button>Display User</button>	
+            <button id="LoadData">Load User Data</button>	
+            <button id="displayData">Display User</button>
+            <button id="saveDataToLS">Save User Page to LS</button>	
+            <button id="loadDataFromLS">Load User Page from LS</button>		
         </div>	
     </div>
+    <script id="user-template" type="text/x-handlebars-template">
+        <img id='profile-pic' src={{img}}>
+        <div>{{name}}</div>
+        <div>{{lastName}}</div>
+        <div>{{city}}</div>
+        <div>{{state}}</div>
+    </script>
+    <script id="friends-template" type="text/x-handlebars-template"> 
+        {{#each listOfFriends}}
+            <div>{{this}}</div>
+        {{/each}}
+    </script>
+
+    <script id="quote-template" type="text/x-handlebars-template"> 
+            <p>{{quote}}</p>
+    </script>   
+    <script id="pokemon-template" type="text/x-handlebars-template"> 
+        <img id='pokemon-image' src={{pokemonImg}}>
+        
+        <div>{{capitalize pokemon}}</div>
+    </script> 
+    <script id="meat-template" type="text/x-handlebars-template"> 
+        <div>{{aboutMe}}</div>
+    </script> 
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="APIManager.js"></script>
+    <script src="Renderer.js"></script>
+    <script src="main.js"></script>
 </body>
 
 </html>
