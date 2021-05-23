@@ -14,6 +14,7 @@ $('#saveDataToLS').click(function() {
    localStorage.setItem('user', JSON.stringify(api)) 
    countUsersInLS++  
 });
+/*************************** */
 
 $('#loadDataFromLS').click(function(){
   let data = JSON.parse(localStorage.user || "[]")
